@@ -27,4 +27,16 @@ export class LabsComponent {
     age: 18,
     avatar: 'https://i.ibb.co/y8HvR0H/mr-peanutbutter.webp'
   }
+
+  clickHandler(){
+    alert('Hello')
+  }
+
+  changeHandler(event: Event){
+    console.log(event);
+
+  }
+
+
+
 }

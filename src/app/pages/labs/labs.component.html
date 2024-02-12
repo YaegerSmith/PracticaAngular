@@ -1,24 +1,32 @@
-<h1>Hola este es mi primer proyecto</h1> <!-- Esta línea muestra un título con el texto -->
-<!-- Esta línea muestra un subtítulo con el valor de la variable welcome, que se define en el componente AppComponent -->
-<h2>{{ welcome }}</h2> 
-<ul style="list-style-type: disc;"> <!-- Esta línea crea una lista con puntos -->
-  <li *ngFor="let task of tasks; let i = index"> <!-- Esta línea usa la directiva *ngFor para iterar sobre el arreglo tasks, que se define en el componente AppComponent, y asignar cada elemento a la variable task y su índice a la variable i -->
-    {{ task }} <!-- Esta línea muestra el valor de la variable task, que corresponde a una tarea que hay que hacer en Angular -->
-  </li>
-</ul>
+<div class="container">
+    <h1>Hola este es mi primer proyecto</h1> <!-- Esta línea muestra un título con el texto -->
+  <!-- Esta línea muestra un subtítulo con el valor de la variable welcome, que se define en el componente AppComponent -->
+  <h2>{{ welcome }}</h2> 
+  <ul style="list-style-type: disc;"> <!-- Esta línea crea una lista con puntos -->
+    <li *ngFor="let task of tasks; let i = index"> <!-- Esta línea usa la directiva *ngFor para iterar sobre el arreglo tasks, que se define en el componente AppComponent, y asignar cada elemento a la variable task y su índice a la variable i -->
+      {{ task }} <!-- Esta línea muestra el valor de la variable task, que corresponde a una tarea que hay que hacer en Angular -->
+    </li>
+  </ul>
 
-<!-- Sección para probar la interpolación de cadenas -->
-<hr />
-<!-- Interpolación de cadenas -->
-<h2>{{ 'hola' .repeat(4) }}</h2>
-<p>la suma es 3 + 3 es {{ 3 + 3 }}</p>
-<p>Hola soy {{ name }} y mi edad es {{ age }}</p>
+  <!-- Sección para probar la interpolación de cadenas -->
+  <hr />
+  <!-- Interpolación de cadenas -->
+  <h2>{{ 'hola' .repeat(4) }}</h2>
+  <p>la suma es 3 + 3 es {{ 3 + 3 }}</p>
+  <p>Hola soy {{ name }} y mi edad es {{ age }}</p>
 
-<!--Sección para entender el Property Binding -->
-<hr/>
-<img [src]="person.avatar" alt="">
-<input type="number" [value]="person.age">
-<button [disabled] = "disabled">Click me</button>
-<p>person: {{ person.name }}
-</p>
+  <!--Sección para entender el Property Binding -->
+  <hr/>
+  <img [src]="person.avatar" alt="">
+  <input type="number" [value]="person.age">
+  <button [disabled] = "disabled">Click me</button>
+  <p>person: {{ person.name }} </p>
 
+  <!--Sección para entender los metodos en Angular -->
+  <hr/>
+  <button (click) = "clickHandler()">click me</button>
+  <button (dblclick) = "clickHandler()">double me</button>
+  <p>(change)</p>
+  <input type="number" [value]="person.age" (change)="changeHandler($event)">
+
+</div>
