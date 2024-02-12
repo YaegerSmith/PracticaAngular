@@ -19,5 +19,12 @@ export class LabsComponent {
   ];
   name = 'Esteban';
   age = 30;
+  disabled = true;
+  img = 'https://i.ibb.co/y8HvR0H/mr-peanutbutter.webp';
 
+  person = {
+    name: 'Esteban',
+    age: 18,
+    avatar: 'https://i.ibb.co/y8HvR0H/mr-peanutbutter.webp'
+  }
 }

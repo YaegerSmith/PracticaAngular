@@ -7,9 +7,18 @@
   </li>
 </ul>
 
-<!--Dividir la pagina -->
+<!-- Sección para probar la interpolación de cadenas -->
 <hr />
 <!-- Interpolación de cadenas -->
 <h2>{{ 'hola' .repeat(4) }}</h2>
 <p>la suma es 3 + 3 es {{ 3 + 3 }}</p>
 <p>Hola soy {{ name }} y mi edad es {{ age }}</p>
+
+<!--Sección para entender el Property Binding -->
+<hr/>
+<img [src]="person.avatar" alt="">
+<input type="number" [value]="person.age">
+<button [disabled] = "disabled">Click me</button>
+<p>person: {{ person.name }}
+</p>
+
